@@ -84,7 +84,7 @@ def spellcheck_path(path, dictionary):
                 print("   {}".format(location))
                 num_errors += 1
     
-    return is_errors
+    return num_errors
 
 
 
@@ -127,6 +127,6 @@ if __name__ == "__main__":
     num_errors = spellcheck_path(args.path, dictionary)
 
     if num_errors:
-        print("Found {} potential misspellings, exiting with error.".format(num_errors))
+        print("\nFound {} potential misspellings, exiting with error.".format(num_errors))
         import sys
         sys.exit(-1)
