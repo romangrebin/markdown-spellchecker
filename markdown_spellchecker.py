@@ -123,5 +123,6 @@ if __name__ == "__main__":
     spellcheck_errors = spellcheck_path(args.path, dictionary)
 
     if spellcheck_errors:
+        print("There were errors. Exiting with status -1")
         import sys
         sys.exit(-1)
