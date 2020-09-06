@@ -63,6 +63,7 @@ def spellcheck_line(line, dictionary):
 
 
 def spellcheck_path(path, dictionary):
+    is_errors = False
 
     if os.path.isdir(path):
         print("Parsing directory...")
@@ -77,10 +78,14 @@ def spellcheck_path(path, dictionary):
         spellcheck_errors = spellcheck_file(file_path, dictionary)
         if not spellcheck_errors:
             print("No errors!")
+        else:
+            is_errors = True
         for word in spellcheck_errors:
             print("'{}' locations:".format(word))
             for location in spellcheck_errors[word]:
                 print("   {}".format(location))
+    
+    return is_errors
 
 
 
