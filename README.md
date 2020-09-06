@@ -11,7 +11,7 @@ pip install markdown
 
 ### Usage
 
-`python markdown-spellchecker.py -p <file_or_directory> -d <optional_custom_dictionary> -d <optional_custom_dictionary2>`
+`python markdown_spellchecker.py -p <file_or_directory> -d <optional_custom_dictionary> -d <optional_custom_dictionary2>`
 
 `file_or_directory` can be a relative path to markdown file or a directory. If it is a directory, the script will search for any files that end in `.md` and will spellcheck them.
 
