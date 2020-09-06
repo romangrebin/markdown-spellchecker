@@ -39,7 +39,7 @@ def spellcheck_line(line, dictionary):
     html = markdown.markdown(line)
 
     # text = "".join(BeautifulSoup(html, "lxml").findAll(text=True))
-    text = "".join(BeautifulSoup(html).findAll(text=True))
+    text = "".join(BeautifulSoup(html, features="html.parser").findAll(text=True))
 
     # Remove punctuation symbols
     text = "".join(c if c not in string.punctuation else " " for c in text)
