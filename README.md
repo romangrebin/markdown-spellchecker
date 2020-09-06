@@ -16,3 +16,5 @@ pip install markdown
 `file_or_directory` can be a relative path to markdown file or a directory. If it is a directory, the script will search for any files that end in `.md` and will spellcheck them.
 
 `optional_custom_dictionary` is optional, for situations with unique words or names. It is a path to a text file that has a single word, <b>in lower case</b> on each line.
+
+The script can be pulled by either cloning the repository or running `wget https://raw.githubusercontent.com/romangrebin/markdown-spellchecker/master/markdown_spellchecker.py`
