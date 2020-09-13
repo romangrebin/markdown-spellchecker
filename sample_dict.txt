@@ -1,3 +1,4 @@
+github
 githubusercontent
 https
 markdown
@@ -5,4 +6,7 @@ py
 pyspellchecker
 spellcheck
 romangrebin
+uncomment
 wget
+workflows
+yml

@@ -18,3 +18,8 @@ pip install markdown
 `optional_custom_dictionary` is optional, for situations with unique words or names. It is a path to a text file that has a single word, <b>in lower case</b> on each line.
 
 The script can be pulled by either cloning the repository or running `wget https://raw.githubusercontent.com/romangrebin/markdown-spellchecker/master/markdown_spellchecker.py`
+
+
+
+### Example
+In the [.github/workflows/spellcheck.yml file](./.github/workflows/spellcheck.yml) there is a sample (working) GitHub action workflow that runs a spellcheck on the files in this repo. In order to use the spellchecker on other repos, simply uncomment the `wget ...` line in the workflow and place the workflow yml file in the desired repository. The command in the final step of the workflow (named "Run spellchecker") can be changed to run on different subdirectories of a repository, or with dictionary files that are named differently.
