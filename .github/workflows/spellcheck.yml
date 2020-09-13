@@ -1,0 +1,30 @@
+name: Spellcheck markdown files
+
+on:
+  pull_request:
+    # Run when a PR to master is submitted or edited
+    branches: [master]
+
+jobs:
+  build:
+    name: Checking markdown spelling
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Master
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4
+          pip install pyspellchecker
+          pip install markdown
+        # wget https://raw.githubusercontent.com/romangrebin/markdown-spellchecker/master/markdown_spellchecker.py
+      - name: Run spellchecker
+        run: |
+          python markdown_spellchecker.py -p . -d sample_dict.txt

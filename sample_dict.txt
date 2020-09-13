@@ -1,0 +1,8 @@
+githubusercontent
+https
+markdown
+py
+pyspellchecker
+spellcheck
+romangrebin
+wget
