@@ -52,7 +52,7 @@ def spellcheck_line(line, dictionary):
     word_num = 1
 
     for word in words:
-        if sc.unknown([word]) and word.lower() not in dictionary and word.isalpha():
+        if sc.unknown([word]) and word.lower() not in dictionary and word.isalpha() and word.isascii():
             if word not in errors:
                 errors[word] = []
             
